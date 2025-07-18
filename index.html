@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>অভিষেক ফর্ম</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>নিবন্ধন ফর্ম</h1>
+    <h2>ঢাকাস্থ তিতাস উপজেলা জাতীয়তাবাদী ফোরাম এর অভিষেক অনুষ্ঠান ২০২৫</h2>
+
+    <form name="registrationForm" method="post" id="form">
+      <div id="resp"></div>
+      <label>১. পূর্ণ নাম:</label>
+      <input type="text" id="name" name="পূর্ণ নাম" required autocomplete="on"/>
+
+      <label>২. মোবাইল নম্বর:</label>
+      <input type="tel" id="phone" required pattern="01[0-9]{9}" name="মোবাইল নম্বর" autocomplete="on" />
+
+      <label>৩. ই-মেইল ঠিকানা (যদি থাকে):</label>
+      <input type="email" id="email" name="ই-মেইল ঠিকানা" autocomplete="on" />
+
+      <label>৪. স্থায়ী ঠিকানা (তিতাস - দাউদকান্দি):</label>
+      <input type="text" id="permanentAddress" name="স্থায়ী ঠিকানা" required autocomplete="on" />
+
+      <label>৫. ঢাকার ঠিকানা:</label>
+      <input type="text" id="dhakaAddress" name="ঢাকার ঠিকানা" required autocomplete="on" />
+
+      <label>৬. এনআইডি নম্বর:</label>
+      <input type="text" id="nid" name="এনআইডি নম্বর" required autocomplete="on" />
+
+      <label>৭. পেশা:</label>
+      <input type="text" id="profession" name="পেশা" required autocomplete="on" />
+
+      <label>৮. বয়স:</label>
+      <input type="number" id="age" min="18" max="150" name="বয়স" required />
+
+      <label>৯. আপনি কী অভিষেক অনুষ্ঠানে অংশগ্রহণ করতে ?</label>
+      <select id="attendance" name="অংশগ্রহণের ইচ্ছা" required>
+        <option value="">নির্বাচন করুন</option>
+        <option value="হ্যাঁ">হ্যাঁ</option>
+        <option value="না">না</option>
+      </select>
+
+      <button type="submit" name="button1">জমা দিন</button>
+      <div id="errorFlash" class="flash hidden">জমা ব্যর্থ হয়েছে!</div>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,155 @@
+/* Base styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Noto Sans Bengali', sans-serif;
+  background: url('https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=1950&q=80') no-repeat center center fixed;
+  background-size: cover;
+  color: #e0e7ff;
+  font-size: 110%; /* All text 10% bigger */
+}
+
+/* Main container */
+.container {
+  max-width: 650px;
+  margin: 60px auto;
+  background-color: rgba(0, 20, 40, 0.85);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 110, 255, 0.4);
+  animation: fadeSlide 1.5s ease;
+  box-sizing: border-box;
+}
+
+/* Headings */
+h1, h2 {
+  text-align: center;
+  color: #69f0ff;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px #000;
+}
+
+/* Form layout */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Labels (Captions) */
+label {
+  font-size: 1.3rem; /* Bigger */
+  color: #00e5ff;    /* Deep neon-cyan */
+  font-weight: 800;  /* Bolder */
+  padding: 6px 8px;
+  background-color: transparent; /* No lighting/boxy background */
+  text-shadow: 0 0 2px #0077b6; /* Subtle glow effect */
+}
+
+/* Inputs and dropdowns */
+input, select {
+  padding: 12px;
+  border: 2px solid #0288d1;
+  border-radius: 6px;
+  font-size: 17px;
+  background-color: #102040;
+  color: #ffffff;
+  transition: all 0.3s ease;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+input:focus, select:focus {
+  border-color: #00bcd4;
+  outline: none;
+  background-color: #1a2a50;
+}
+
+/* Button */
+button {
+  padding: 12px;
+  font-size: 18px;
+  background-color: #01579b;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0288d1;
+}
+
+/* Error flash */
+.flash {
+  text-align: center;
+  background-color: #c62828;
+  color: #fff;
+  padding: 10px;
+  border-radius: 6px;
+  animation: flashRed 0.5s;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Animations */
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes flashRed {
+  0% { opacity: 1; }
+  50% { opacity: 0.3; }
+  100% { opacity: 1; }
+}
+
+/* ✅ Responsive for mobile */
+@media (max-width: 768px) {
+  .container {
+    margin: 30px 15px;
+    padding: 25px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  label {
+    font-size: 1.1rem;
+  }
+
+  input, select, button {
+    font-size: 17px;
+  }
+}
+/* Button pulse effect */
+button:active {
+  transform: scale(0.97);
+  box-shadow: 0 0 10px #00bcd4;
+}
+
+/* Success message animation (optional later) */
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+#resp {
+  color: whitesmoke;
+  font-size: 22px;
+}
